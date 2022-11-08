@@ -25,6 +25,26 @@ function Opcoes() {
     }
 }
 
+function Login(nome, senha) {
+    let loginVerdadeiro = nomes.includes(nome)
+    let senhaVerdadeira = senha.includes(senha)
+    if (loginVerdadeiro && senhaVerdadeira) {
+        let nomeIndex = nomes.indexOf(nome)
+        let senhaIndex = senha.indexOf(senha)
+        if (senhaIndex == nomeIndex) {
+            return true
+
+        } else {
+            return false
+
+        }
+    } else {
+        return false
+    }
+}
+
+
+
 while (continuar) {
     Opcoes();
 }
