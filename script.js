@@ -16,7 +16,11 @@ function Opcoes() {
         case "2":
             let nome = prompt("Digite o Usuario:")
             let senha = prompt("Digite a senha:")
-            console.log(Login(nome, senha))
+            if (Login(nome, senha)) {
+                console.log("Login feito com sucesso!")
+            } else {
+                console.log("Nome ou senha incorretos")
+            }
             break;
         case "3":
             let usuario = prompt("Digite o Usuario que deseja excluir:")
@@ -74,6 +78,7 @@ function ExcluirUsuario(usuario) {
                 senhasSup.push(x)
             }
         })
+        console.log("Usuario deletado.")
     } else {
         console.log("Usuario não encontrado")
     }
